@@ -24,7 +24,13 @@ function App() {
       <ul className="results">
         {filteredData.map((element) => {
           return (
-            <li key={element.title}>
+            <li
+              key={element.title}
+              onClick={() => {
+                navigator.clipboard.writeText(element.symbol); // ICI?
+                alert("Copied the text: " + element.symbol);
+              }}
+            >
               <Line data={element} />
             </li>
           );
