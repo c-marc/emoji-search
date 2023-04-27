@@ -27,8 +27,9 @@ function App() {
             <li
               key={element.title}
               onClick={() => {
-                navigator.clipboard.writeText(element.symbol); // ICI?
-                alert("Copied the text: " + element.symbol);
+                navigator.clipboard.writeText(element.symbol).then(() => {
+                  return alert("Copied the text: " + element.symbol);
+                });
               }}
             >
               <Line data={element} />
