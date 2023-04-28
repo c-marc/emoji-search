@@ -3,10 +3,11 @@ const Search = ({ searchPattern, setSearchPattern }) => {
     <header>
       <h1>🦀 Emoji Search 🦀</h1>
       <input
-        type="text"
+        type="search"
         value={searchPattern}
         onChange={(e) => setSearchPattern(e.target.value)}
         placeholder="Which emoji are you looking for ?"
+        aria-label="Search"
       />
     </header>
   );

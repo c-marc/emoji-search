@@ -33,18 +33,35 @@ input {
 }
 
 .results {
-  border: 1px solid;
+  /* border: 1px solid; */
   width: max(95svh, 800px);
   padding: 1rem;
 }
 
-.results li {
+.line {
   border: 1px solid;
   margin: 0.5em 0;
   border-radius: 5px;
   font-size: 1.2rem;
   padding: 0.5em;
   background-color: #f5e3e3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line:hover {
+  background-color: #f6d9d9;
+}
+
+.line span {
+  visibility: hidden;
+  font-size: 0.8em;
+  color: grey;
+  transition: visibility 0.2s;
+}
+
+.line:hover span {
+  visibility: visible;
 }
 
 footer span {

@@ -13,6 +13,7 @@ function App() {
   const filteredData = data.filter((element) =>
     element.keywords.includes(searchPattern)
   );
+  //.slice(0, 20);
 
   return (
     <div className="app">
